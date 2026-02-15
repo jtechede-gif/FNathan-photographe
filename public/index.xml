@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>FNathan Photographe</title>
+    <link>//localhost:50573/</link>
+    <description>Recent content on FNathan Photographe</description>
+    <generator>Hugo</generator>
+    <language>fr-fr</language>
+    <lastBuildDate>Sat, 15 Jun 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:50573/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mariage en forêt</title>
+      <link>//localhost:50573/portfolio/les-projets/mariage-forets/</link>
+      <pubDate>Sat, 15 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:50573/portfolio/les-projets/mariage-forets/</guid>
+      <description>&lt;p&gt;Ambiance bohème et lumière dorée.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>À propos</title>
+      <link>//localhost:50573/a-propos/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:50573/a-propos/</guid>
+      <description>&lt;p&gt;Je suis FNathan, photographe passionné basé en Haiti.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Contact</title>
+      <link>//localhost:50573/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:50573/contact/</guid>
+      <description>&lt;p&gt;Pour toute demande, écrivez-moi à &lt;a href=&#34;mailto:fnathanphoto@gmail.com&#34;&gt;fnathanphoto@gmail.com&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

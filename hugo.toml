@@ -1,0 +1,19 @@
+baseURL = "/"
+languageCode = "fr-fr"
+defaultContentLanguage = "fr"
+title = "FNathan Photographe"
+
+[imaging]
+  resampleFilter = "box"
+  quality = 85
+  anchor = "smart"
+
+[params]
+  description = "Portfolio professionnel du photographe FNathan"
+  author = "FNathan"
+
+[taxonomies]
+  categorie = "categories"
+
+[permalinks]
+  projets = "/portfolio/:slug/"

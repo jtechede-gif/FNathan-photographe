@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Portfolio on FNathan Photographe</title>
+    <link>//localhost:50573/portfolio/</link>
+    <description>Recent content in Portfolio on FNathan Photographe</description>
+    <generator>Hugo</generator>
+    <language>fr-fr</language>
+    <lastBuildDate>Sat, 15 Jun 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:50573/portfolio/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mariage en forêt</title>
+      <link>//localhost:50573/portfolio/les-projets/mariage-forets/</link>
+      <pubDate>Sat, 15 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:50573/portfolio/les-projets/mariage-forets/</guid>
+      <description>&lt;p&gt;Ambiance bohème et lumière dorée.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

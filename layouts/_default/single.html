@@ -1,0 +1,18 @@
+{{ define "main" }}
+<article class="projet">
+  <h1>{{ .Title }}</h1>
+  <p class="meta">
+    {{ .Date.Format "2 January 2006" }} — {{ .Params.category }}
+  </p>
+
+  {{ .Content }}
+
+  {{ if .Params.images }}
+    <div class="gallery">
+      {{ range .Params.images }}
+        <img src="{{ . }}" alt="" loading="lazy">
+      {{ end }}
+    </div>
+  {{ end }}
+</article>
+{{ end }}

@@ -1,0 +1,23 @@
+{{ define "main" }}
+<section class="hero">
+  <h1>{{ .Title }}</h1>
+  <p>{{ .Params.subtitle | default "Photographe professionnel" }}</p>
+</section>
+
+<section class="recent-works">
+  <h2>Derniers projets</h2>
+  <div class="grid">
+    {{ $projets := where .Site.RegularPages "Section" "portfolio" }}
+    {{ range first 6 $projets }}
+      <article class="card">
+        <a href="{{ .RelPermalink }}">
+          {{ with .Params.featured_image }}
+            <img src="{{ . }}" alt="{{ $.Title }}">
+          {{ end }}
+          <h3>{{ .Title }}</h3>
+        </a>
+      </article>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
