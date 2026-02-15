@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>FNathan Fotograf on FNathan Photographe</title>
-    <link>/fr/ht/</link>
+    <link>//localhost:1313/fr/ht/</link>
     <description>Recent content in FNathan Fotograf on FNathan Photographe</description>
     <generator>Hugo</generator>
     <language>fr-fr</language>
     <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/fr/ht/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/fr/ht/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>À propos</title>
-      <link>/fr/ht/apwopo/</link>
+      <link>//localhost:1313/fr/ht/apwopo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/fr/ht/apwopo/</guid>
+      <guid>//localhost:1313/fr/ht/apwopo/</guid>
       <description>&lt;p&gt;Mwen se FNathan, yon fotograf pasyone ki baze an Frans.&lt;br&gt;&#xA;Travay mwen konsantre sou kaptire emosyon otantik ak peyizaj intanpòl.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Kontak</title>
-      <link>/fr/ht/kontak/</link>
+      <link>//localhost:1313/fr/ht/kontak/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/fr/ht/kontak/</guid>
+      <guid>//localhost:1313/fr/ht/kontak/</guid>
       <description>&lt;p&gt;Pou nenpòt demand, voye yon imèl bay &lt;a href=&#34;mailto:contact@fnathan-photo.com&#34;&gt;contact@fnathan-photo.com&lt;/a&gt;&lt;br&gt;&#xA;oswa itilize fòmilè a (si w ajoute youn pita).&lt;/p&gt;</description>
     </item>
   </channel>

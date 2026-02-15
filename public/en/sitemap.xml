@@ -2,48 +2,48 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/en/categories/</loc>
+    <loc>//localhost:1313/en/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr-fr"
-                href="/fr/categories/"
+                href="//localhost:1313/fr/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ht"
-                href="/ht/categories/"
+                href="//localhost:1313/ht/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es-es"
-                href="/es/categories/"
+                href="//localhost:1313/es/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="/en/categories/"
+                href="//localhost:1313/en/categories/"
                 />
   </url><url>
-    <loc>/en/</loc>
+    <loc>//localhost:1313/en/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr-fr"
-                href="/fr/"
+                href="//localhost:1313/fr/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ht"
-                href="/ht/"
+                href="//localhost:1313/ht/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es-es"
-                href="/es/"
+                href="//localhost:1313/es/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="/en/"
+                href="//localhost:1313/en/"
                 />
   </url>
 </urlset>
