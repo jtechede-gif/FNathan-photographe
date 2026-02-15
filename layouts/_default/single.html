@@ -1,18 +1,22 @@
 {{ define "main" }}
-<article class="projet">
-  <h1>{{ .Title }}</h1>
-  <p class="meta">
-    {{ .Date.Format "2 January 2006" }} — {{ .Params.category }}
-  </p>
-
-  {{ .Content }}
-
-  {{ if .Params.images }}
-    <div class="gallery">
-      {{ range .Params.images }}
-        <img src="{{ . }}" alt="" loading="lazy">
-      {{ end }}
+<section class="py-24 px-6 bg-background-light dark:bg-background-dark">
+    <div class="max-w-5xl mx-auto">
+        <h1 class="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4">{{ .Title }}</h1>
+        <p class="text-primary text-sm font-bold uppercase tracking-widest mb-8">{{ .Params.categorie }} — {{ .Date.Format "2 January 2006" }}</p>
+        
+        <div class="prose prose-lg dark:prose-invert mb-12">
+            {{ .Content }}
+        </div>
+        
+        {{ if .Params.images }}
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {{ range .Params.images }}
+            <div class="rounded-xl overflow-hidden bg-surface-dark">
+                <img src="{{ . }}" alt="" class="w-full h-auto object-cover">
+            </div>
+            {{ end }}
+        </div>
+        {{ end }}
     </div>
-  {{ end }}
-</article>
+</section>
 {{ end }}

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FNathan Photographe</title>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Portafolio – FNathan Photographe</title>
+<meta name="description" content="Portfolio professionnel du photographe FNathan">
+
+
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+
+<script id="tailwind-config">
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                colors: {
+                    "primary": "#1754cf",
+                    "background-light": "#f6f6f8",
+                    "background-dark": "#0a0c11",
+                    "surface-dark": "#111621",
+                },
+                fontFamily: {
+                    "display": ["Inter", "sans-serif"]
+                },
+                borderRadius: {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+                },
+            },
+        },
+    }
+</script>
+
+
+<style>
+    body {
+        font-family: 'Inter', sans-serif;
+        scroll-behavior: smooth;
+    }
+    .masonry-grid {
+        columns: 1;
+    }
+    @media (min-width: 768px) {
+        .masonry-grid {
+            columns: 2;
+        }
+    }
+    @media (min-width: 1024px) {
+        .masonry-grid {
+            columns: 3;
+        }
+    }
+    .masonry-item {
+        break-inside: avoid;
+        margin-bottom: 1.5rem;
+    }
+    .lang-dropdown:hover .lang-menu {
+        display: block;
+    }
+</style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+    
+<div class="hidden lg:flex items-center gap-4 border-r border-white/10 pr-8 text-[10px] font-bold uppercase tracking-widest">
+    
+        
+        
+        <a class="text-white transition-colors" 
+           href="/fr/">
+            Français
+        </a>
+    
+        
+        
+        <a class="text-white/40 hover:text-primary transition-colors" 
+           href="/en/">
+            English
+        </a>
+    
+        
+        
+        <a class="text-white/40 hover:text-primary transition-colors" 
+           href="/ht/">
+            Kreyòl
+        </a>
+    
+        
+        
+        <a class="text-white/40 hover:text-primary transition-colors" 
+           href="/es/">
+            Español
+        </a>
+    
+</div>
+    <main>
+        
+<h1>Portafolio</h1>
+<p>Explore mis últimos proyectos por categoría.</p>
+
+<div class="grid">
+  
+    <article class="card">
+      <a href="/es/portafolio/les-projets/boda-en-el-bosque/">
+        
+          <img src="/uploads/mariage-foret/featured.jpg" alt="Portafolio">
+        
+        <h2>Boda en el bosque</h2>
+        <p>Una boda íntima en el corazón del bosque</p>
+      </a>
+    </article>
+  
+</div>
+
+    </main>
+    <footer class="bg-background-light dark:bg-background-dark border-t border-white/5 py-12 px-6">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+        
+        <div class="text-2xl font-bold tracking-tighter text-slate-900 dark:text-white">
+            FNathan Photographe<span class="text-primary">.</span>
+        </div>
+
+        
+        <div class="flex items-center gap-6 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400">
+            <a class="hover:text-primary transition-colors" href="/ht/">Kreyòl</a>
+            <a class="hover:text-primary transition-colors" href="/fr/">Français</a>
+            <a class="hover:text-primary transition-colors" href="/en/">English</a>
+        </div>
+
+        
+        <div class="flex items-center gap-8 text-xs font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400">
+            <a class="hover:text-primary" href="#">Privacy</a>
+            <a class="hover:text-primary" href="#">Terms</a>
+            <a class="hover:text-primary" href="#">FAQ</a>
+        </div>
+
+        
+        <div class="text-slate-500 dark:text-slate-400 text-sm">
+            © 2026 FNathan. All rights reserved.
+        </div>
+    </div>
+</footer>
+    <script src="/js/main.js"></script>
+</body>
+</html>

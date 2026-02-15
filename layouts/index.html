@@ -1,23 +1,91 @@
-{{ define "main" }}
-<section class="hero">
-  <h1>{{ .Title }}</h1>
-  <p>{{ .Params.subtitle | default "Photographe professionnel" }}</p>
-</section>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FNathan Photographe - Bienvenue</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            overflow: hidden;
+        }
+        .fade-in {
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: scale(0.95); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+        .bg-overlay {
+            background: rgba(10, 12, 17, 0.6); /* background-dark avec transparence */
+        }
+    </style>
+</head>
+<body class="h-screen w-full relative overflow-hidden">
+    <!-- Image de fond -->
+    <div class="absolute inset-0 z-0">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBW_KPAdXI4e4FHFpbo5JjrMltiR_hUbaNED4RVKNet7xGCOpsKOh4NCQedREwvg62beTAOC_i6JHjuLVRFT_6reqMg9AaCUSjVSk8qbLfyyRlAbgzI26Jt1UbsF56yx4cAx6MwNSe3kJwFc1mJtYYQ1BvFMPLOosGoxfsILFD-HWtTzruR-XVsanwDA2BcKf0Q5ogR5jW8QyfnDzb40JXxz0TZCdgxBdrjMa8P6tSW2iK-uBfD5LPrBRNfAG2xtlwcs8shCnIQMNQ" 
+             alt="Background" 
+             class="w-full h-full object-cover">
+        <!-- Overlay sombre -->
+        <div class="absolute inset-0 bg-black/50"></div>
+    </div>
 
-<section class="recent-works">
-  <h2>Derniers projets</h2>
-  <div class="grid">
-    {{ $projets := where .Site.RegularPages "Section" "portfolio" }}
-    {{ range first 6 $projets }}
-      <article class="card">
-        <a href="{{ .RelPermalink }}">
-          {{ with .Params.featured_image }}
-            <img src="{{ . }}" alt="{{ $.Title }}">
-          {{ end }}
-          <h3>{{ .Title }}</h3>
-        </a>
-      </article>
-    {{ end }}
-  </div>
-</section>
-{{ end }}
+    <!-- Contenu centré -->
+    <div class="relative z-10 h-full flex flex-col items-center justify-center text-white px-4 fade-in">
+        <!-- Logo -->
+        <div class="mb-8 text-center">
+            <h1 class="text-5xl md:text-7xl font-bold tracking-tighter">
+                FNATHAN<span class="text-[#1754cf]">.</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-300 mt-2 tracking-widest uppercase">Photographe</p>
+        </div>
+
+        <!-- Sélecteur de langue -->
+        <div class="mb-10 w-full max-w-md">
+            <p class="text-center text-sm uppercase tracking-widest text-gray-400 mb-4">Choisissez votre langue</p>
+            <div class="grid grid-cols-2 gap-3 md:grid-cols-4">
+                <!-- Créole -->
+                <label class="relative flex items-center justify-center p-3 rounded-xl border-2 border-white/20 bg-white/5 backdrop-blur-sm cursor-pointer transition-all hover:bg-white/10 hover:border-[#1754cf] has-[:checked]:bg-[#1754cf]/20 has-[:checked]:border-[#1754cf]">
+                    <input type="radio" name="lang" value="ht" class="absolute opacity-0" checked>
+                    <span class="font-medium">Kreyòl</span>
+                </label>
+                <!-- Français -->
+                <label class="relative flex items-center justify-center p-3 rounded-xl border-2 border-white/20 bg-white/5 backdrop-blur-sm cursor-pointer transition-all hover:bg-white/10 hover:border-[#1754cf] has-[:checked]:bg-[#1754cf]/20 has-[:checked]:border-[#1754cf]">
+                    <input type="radio" name="lang" value="fr" class="absolute opacity-0">
+                    <span class="font-medium">Français</span>
+                </label>
+                <!-- Anglais -->
+                <label class="relative flex items-center justify-center p-3 rounded-xl border-2 border-white/20 bg-white/5 backdrop-blur-sm cursor-pointer transition-all hover:bg-white/10 hover:border-[#1754cf] has-[:checked]:bg-[#1754cf]/20 has-[:checked]:border-[#1754cf]">
+                    <input type="radio" name="lang" value="en" class="absolute opacity-0">
+                    <span class="font-medium">English</span>
+                </label>
+                <!-- Espagnol -->
+                <label class="relative flex items-center justify-center p-3 rounded-xl border-2 border-white/20 bg-white/5 backdrop-blur-sm cursor-pointer transition-all hover:bg-white/10 hover:border-[#1754cf] has-[:checked]:bg-[#1754cf]/20 has-[:checked]:border-[#1754cf]">
+                    <input type="radio" name="lang" value="es" class="absolute opacity-0">
+                    <span class="font-medium">Español</span>
+                </label>
+            </div>
+        </div>
+
+        <!-- Bouton Entrer -->
+        <button id="enterBtn" class="bg-[#1754cf] hover:bg-[#1754cf]/90 text-white px-10 py-4 rounded-xl font-bold text-lg transition-all transform hover:scale-105 shadow-lg shadow-[#1754cf]/30">
+            Entrer
+        </button>
+    </div>
+
+    <!-- Script de redirection -->
+    <script>
+        document.getElementById('enterBtn').addEventListener('click', function() {
+            const selectedLang = document.querySelector('input[name="lang"]:checked').value;
+            // Redirige vers la racine de la langue choisie (ex: /fr/)
+            window.location.href = '/' + selectedLang + '/';
+        });
+    </script>
+</body>
+</html>

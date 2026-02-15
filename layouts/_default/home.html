@@ -1,0 +1,115 @@
+{{ define "main" }}
+<!-- Section Hero -->
+<section class="relative h-screen w-full flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+        <img alt="{{ .Params.hero_image_alt | default "Hero background" }}" 
+             class="w-full h-full object-cover brightness-[0.4]" 
+             src="{{ .Params.hero_image | default "https://lh3.googleusercontent.com/aida-public/AB6AxUbW_KPAdXl4e4FHfPbob5JrMItR_HuBaNED4RVKNet7xGCQpsKoH4nQCQedReWxg62bteTAOC_i6JHjulVRT_f6eqMg9AaCUSjVsK8qLfyyRIAbgzl26Jt1UbsF56yx4cAx6MwNSsKkHWtTzruR-XVsnawDA2Bckf0QSoqR5jW8QyfnDzb40JXXo2TZCDxgBdrjMa8P6iSW2ik-uBfDSLPBRNFAG2xtiwcs8shCnIQMNQ" }}">
+    </div>
+    <div class="relative z-10 text-center px-6 max-w-4xl">
+        <h1 class="text-5xl md:text-8xl font-bold text-white mb-6 tracking-tight leading-tight">
+            {{ .Params.hero_title | safeHTML }}
+        </h1>
+        <p class="text-lg md:text-xl text-slate-300 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
+            {{ .Params.hero_subtitle }}
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a class="bg-white text-background-dark px-8 py-4 rounded-xl font-bold text-sm uppercase tracking-widest hover:bg-slate-200 transition-all" href="#gallery">
+                {{ .Params.hero_button1_text | default "View Portfolio" }}
+            </a>
+            <a class="border border-white/30 text-white backdrop-blur-sm px-8 py-4 rounded-xl font-bold text-sm uppercase tracking-widest hover:bg-white/10 transition-all" href="/{{ .Site.Language.Lang }}/a-propos/">
+                {{ .Params.hero_button2_text | default "The Artist" }}
+            </a>
+        </div>
+    </div>
+    <div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/50 animate-bounce">
+        <span class="material-icons text-3xl">expand_more</span>
+    </div>
+</section>
+
+<!-- Section Galerie Portfolio -->
+<section class="py-24 px-6 bg-background-light dark:bg-background-dark" id="gallery">
+    <div class="max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
+            <div>
+                <h2 class="text-xs uppercase tracking-[0.3em] text-primary font-bold mb-4">{{ .Params.gallery_suptitle | default "Portfolio Selection" }}</h2>
+                <h3 class="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white leading-tight">
+                    {{ .Params.gallery_title | safeHTML }}
+                </h3>
+            </div>
+            <div class="flex flex-wrap gap-3">
+                <button class="px-6 py-2 rounded-full bg-primary text-white text-sm font-medium">All Works</button>
+                <button class="px-6 py-2 rounded-full bg-slate-200 dark:bg-surface-dark text-slate-600 dark:text-slate-400 text-sm font-medium hover:bg-primary/10 hover:text-primary transition-all">Portraits</button>
+                <button class="px-6 py-2 rounded-full bg-slate-200 dark:bg-surface-dark text-slate-600 dark:text-slate-400 text-sm font-medium hover:bg-primary/10 hover:text-primary transition-all">Landscapes</button>
+                <button class="px-6 py-2 rounded-full bg-slate-200 dark:bg-surface-dark text-slate-600 dark:text-slate-400 text-sm font-medium hover:bg-primary/10 hover:text-primary transition-all">Editorial</button>
+                <button class="px-6 py-2 rounded-full bg-slate-200 dark:bg-surface-dark text-slate-600 dark:text-slate-400 text-sm font-medium hover:bg-primary/10 hover:text-primary transition-all">Events</button>
+            </div>
+        </div>
+
+        <div class="masonry-grid gap-6">
+            {{ $projets := where .Site.RegularPages "Section" "portfolio" }}
+            {{ range $projets }}
+            <div class="masonry-item group relative overflow-hidden rounded-xl bg-surface-dark">
+                <a href="{{ .RelPermalink }}">
+                    <img alt="{{ .Title }}" 
+                         class="w-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                         src="{{ .Params.featured_image | default "https://via.placeholder.com/600x400" }}">
+                    <div class="absolute inset-0 bg-gradient-to-t from-background-dark/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-primary text-xs font-bold uppercase tracking-widest mb-1">{{ .Params.categorie }}</span>
+                        <h4 class="text-white text-xl font-bold">{{ .Title }}</h4>
+                    </div>
+                </a>
+            </div>
+            {{ end }}
+        </div>
+
+        <div class="mt-16 text-center">
+            <a href="/{{ .Site.Language.Lang }}/portfolio/" class="border-b-2 border-primary text-primary font-bold tracking-widest uppercase py-2 hover:text-slate-900 dark:hover:text-white transition-all">
+                Browse Archive
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Section Services -->
+<section class="py-24 bg-white dark:bg-surface-dark" id="services">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+            {{ range .Params.services }}
+            <div class="space-y-6">
+                <div class="w-14 h-14 bg-primary/10 flex items-center justify-center rounded-xl">
+                    <span class="material-icons text-primary">{{ .icon }}</span>
+                </div>
+                <h4 class="text-2xl font-bold">{{ .title }}</h4>
+                <p class="text-slate-500 dark:text-slate-400 leading-relaxed">
+                    {{ .description }}
+                </p>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+<!-- Section Contact avec fond image -->
+<section class="relative py-32 overflow-hidden">
+    <div class="absolute inset-0 z-0">
+        <img alt="{{ .Params.cta_image_alt | default "Contact background" }}" 
+             class="w-full h-full object-cover brightness-[0.2]" 
+             src="{{ .Params.cta_image | default "https://lh3.googleusercontent.com/aida-public/AB6AxUbWLM7qNj6FqpDW1vX-tq3BzqRtEvjCNCOcQscMJJPPM8Mqh8D34febb8pOlbuo6SztBUbQ9QX2BN3I0ByXkG0ivrCrBtso_CeuC6k5UO-H2kvOam6sxt_awmzw_oN9ES0j3S-9xb9XxBGXpnNuCryp9R6un-G0iz3RG9kAJSO_aNCoRoFFWuHqtgKVCLYlQbYHKEnqQk8uS701ApYICseRtEgwEePS0EZdDTTct4lt_I7UB6tzKfxrf6qcJtBZjfZIKawtrRsRQ8" }}">
+    </div>
+    <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
+        <h2 class="text-4xl md:text-6xl font-bold text-white mb-8">{{ .Params.cta_title | default "Ready to capture your next vision?" }}</h2>
+        <p class="text-lg text-slate-300 mb-12">{{ .Params.cta_subtitle | default "Currently taking bookings for Q3 and Q4. Let's create something extraordinary together." }}</p>
+        <div class="inline-flex flex-col sm:flex-row gap-4">
+            <a href="/{{ .Site.Language.Lang }}/contact/" class="bg-primary text-white px-10 py-5 rounded-xl font-bold text-lg hover:scale-105 transition-transform shadow-2xl shadow-primary/40">
+                {{ .Params.cta_button_text | default "Get in Touch" }}
+            </a>
+            <div class="flex items-center justify-center gap-6 mt-8 sm:mt-0 sm:ml-12">
+                <a class="text-white/60 hover:text-white transition-colors" href="#"><span class="material-icons">facebook</span></a>
+                <a class="text-white/60 hover:text-white transition-colors" href="#"><span class="material-icons">camera</span></a>
+                <a class="text-white/60 hover:text-white transition-colors" href="#"><span class="material-icons">alternate_email</span></a>
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}

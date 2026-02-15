@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html class="dark" lang="en">
 <head>
-      <meta charset="utf-8">
-    </head>{{ partial "head.html" . }}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Site.Title }}</title>
+    {{ partial "head.html" . }}
 </head>
-<body>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
     {{ partial "header.html" . }}
     <main>
         {{ block "main" . }}{{ end }}

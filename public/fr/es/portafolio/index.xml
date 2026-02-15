@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Portafolio on FNathan Photographe</title>
+    <link>/fr/es/portafolio/</link>
+    <description>Recent content in Portafolio on FNathan Photographe</description>
+    <generator>Hugo</generator>
+    <language>fr-fr</language>
+    <lastBuildDate>Sat, 15 Jun 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/fr/es/portafolio/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Boda en el bosque</title>
+      <link>/fr/es/portafolio/les-projets/boda-en-el-bosque/</link>
+      <pubDate>Sat, 15 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>/fr/es/portafolio/les-projets/boda-en-el-bosque/</guid>
+      <description>&lt;p&gt;Ambiente bohemio, luz dorada y mucho amor.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
