@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Portfolyo on FNathan Photographe</title>
+    <link>//localhost:1313/en/ht/pofolyo/</link>
+    <description>Recent content in Portfolyo on FNathan Photographe</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 15 Jun 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/en/ht/pofolyo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mariage nan forè</title>
+      <link>//localhost:1313/en/ht/pofolyo/proje-yo/maryaj-for%C3%A8/</link>
+      <pubDate>Sat, 15 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/en/ht/pofolyo/proje-yo/maryaj-for%C3%A8/</guid>
+      <description>&lt;p&gt;Atmosfè bobo, limyè dore, ak anpil lanmou.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

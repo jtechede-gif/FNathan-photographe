@@ -1,0 +1,23 @@
+{{ define "main" }}
+<section class="py-24 px-6 bg-background-light dark:bg-background-dark">
+    <div class="max-w-7xl mx-auto">
+        <h1 class="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-8">{{ .Title }}</h1>
+        {{ .Content }}
+        <div class="masonry-grid gap-6 mt-12">
+            {{ range .Pages }}
+            <div class="masonry-item group relative overflow-hidden rounded-xl bg-surface-dark">
+                <a href="{{ .RelPermalink }}">
+                    <img alt="{{ .Title }}" 
+                         class="w-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                         src="{{ .Params.featured_image | default "https://via.placeholder.com/600x400" }}">
+                    <div class="absolute inset-0 bg-gradient-to-t from-background-dark/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-primary text-xs font-bold uppercase tracking-widest mb-1">{{ .Params.categorie }}</span>
+                        <h4 class="text-white text-xl font-bold">{{ .Title }}</h4>
+                    </div>
+                </a>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+{{ end }}

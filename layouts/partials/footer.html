@@ -1,0 +1,28 @@
+<footer class="bg-background-light dark:bg-background-dark border-t border-white/5 py-12 px-6">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+        <!-- Logo -->
+        <div class="text-2xl font-bold tracking-tighter text-slate-900 dark:text-white">
+            {{ .Site.Title }}<span class="text-primary">.</span>
+        </div>
+
+        <!-- Liens langue (statiques) -->
+        <div class="flex items-center gap-6 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400">
+            <a class="hover:text-primary transition-colors" href="/ht/">Kreyòl</a>
+            <a class="hover:text-primary transition-colors" href="/fr/">Français</a>
+            <a class="hover:text-primary transition-colors" href="/en/">English</a>
+            <a class="hover:text-primary transition-colors" href="/es/">Español</a>
+        </div>
+
+        <!-- Liens légaux -->
+        <div class="flex items-center gap-8 text-xs font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400">
+            <a class="hover:text-primary" href="#">Privacy</a>
+            <a class="hover:text-primary" href="#">Terms</a>
+            <a class="hover:text-primary" href="#">FAQ</a>
+        </div>
+
+        <!-- Copyright -->
+        <div class="text-slate-500 dark:text-slate-400 text-sm">
+            © {{ now.Format "2026" }} {{ .Site.Params.author }}. All rights reserved.
+        </div>
+    </div>
+</footer>

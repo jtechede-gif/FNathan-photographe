@@ -1,0 +1,11 @@
+<!-- Liens de langue desktop -->
+<div class="hidden lg:flex items-center gap-4 border-r border-white/10 pr-8 text-[10px] font-bold uppercase tracking-widest">
+    {{ range .Site.Languages }}
+        {{ $lang := . }}
+        {{ $currentLang := $.Site.Language }}
+        <a class="{{ if eq $lang $currentLang }}text-white{{ else }}text-white/40 hover:text-primary{{ end }} transition-colors" 
+           href="/{{ $lang.Lang }}/">
+            {{ .LanguageName }}
+        </a>
+    {{ end }}
+</div>

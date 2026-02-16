@@ -1,0 +1,42 @@
+baseURL = "/"
+title = "FNathan Photographe"
+defaultContentLanguageInSubdir = true   # ← changer à true
+
+[imaging]
+  resampleFilter = "box"
+  quality = 85
+  anchor = "smart"
+
+[params]
+  description = "Portfolio professionnel du photographe FNathan"
+  author = "FNathan"
+
+[taxonomies]
+  categorie = "categories"
+
+[permalinks]
+  projets = "/portfolio/:slug/"
+
+[languages]
+  [languages.fr]
+    languageCode = "fr-fr"
+    languageName = "Français"
+    weight = 1
+  [languages.en]
+    languageCode = "en-us"
+    languageName = "English"
+    weight = 2
+  [languages.ht]
+    languageCode = "ht"
+    languageName = "Kreyòl"
+    weight = 3
+  [languages.es]
+    languageCode = "es-es"
+    languageName = "Español"
+    weight = 4
+
+# Autoriser le HTML brut dans le Markdown
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
