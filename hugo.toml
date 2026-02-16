@@ -1,6 +1,5 @@
 baseURL = "/"
 title = "FNathan Photographe"
-defaultContentLanguage = "fr"
 defaultContentLanguageInSubdir = true   # ← changer à true
 
 [imaging]
